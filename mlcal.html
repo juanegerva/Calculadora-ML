@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="mercadolibre, mercadopago, mercadoshops, calculadora, comisiones">
+    <meta name="description"
+        content="Calculadora que nos ayuda a determinar el valor a cobrar para no perder rentabilidad en nuestras ventas">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+
+    <!-- Titulo de la pagina-->
+    <title>ML CALC</title>
+    <link rel="icon" href="img/calc.png">
+
+</head>
+
+<!-- Proyecto -->
+
+<body id="fondo">
+    <!--NAVEGADOR -->
+    <header>
+        <nav id="logo__nav" class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="#" alt="Logo calculadora">
+
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link color__palabra" href="#" data-toggle="modal"
+                                data-target="#modalUnirse">Ingresar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /NAVEGADOR -->
+
+
+    <section id="caracteristicas" class="mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center text-uppercase">
+                    <small>Simulador de costos</small>
+                    <h2>MERCADOLIBRE</h2>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <!-- OPCIONES DE CALCULO -->
+    <section id="caracteristicas" class="mt-4">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="img/logoMP.jpg" alt="logo MERCADOPAGO">
+                        <div class="card-body" id="mercadoPago">
+                            <h5 class="card-title">MERCADOPAGO</h5>
+                            <p class="card-text">Calcular si vas a recibir un cobro
+                                mediante link de pago, QR o Point
+                            </p>
+                            <button type="button" class="btn btn__carousel" id="buttonMP">Calculo MERCADOPAGO</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="img/logoml.jpg" alt="logo MERCADOLIBRE">
+                        <div class="card-body">
+                            <h5 class="card-title">MERCADOLIBRE</h5>
+                            <p class="card-text">Calcula a cuanto tenes que vender tu producto para ganar lo que
+                                esperabas
+                            </p>
+                            <button type="button" class="btn btn__carousel" id="buttonML">Calculo MERCADOLIBRE</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="img/logoms.jpg" alt="logo MERCADOSHOPS">
+                        <div class="card-body">
+                            <h5 class="card-title">MERCADOSHOP</h5>
+                            <p class="card-text">Calcula el valor y costo de vender en tu pagina</p>
+                            <button type="button" class="btn btn__carousel" id="buttonMS">Calculo MERCADOSHOPS</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- /OPCIONES DE CALCULOS -->
+
+
+
+
+    <section id="mercadopago" class="mt-4" style="display: none">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-4 col-lg-4 mb-4">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="img/logoMP.jpg" alt="logo MERCADOPAGO">
+                        <div class="card-body" id="mercadoPago">
+                            <h5 class="card-title">MERCADOPAGO</h5>
+                            <p class="card-text pb-5">Calcular si vas a recibir un cobro
+                                mediante link de pago, QR o Point
+                            </p>
+                            <button type="button" class="btn btn__carousel" id="buttonML2">MERCADOLIBRE</button>
+                            <button type="button" class="btn btn__carousel" id="buttonMS2">MERCADOSHOP</button>
+                        </div>
+                    </div>
+                </div>
+
+                <section id="calculadoraML" class="col-12 col-md-8 col-lg-8 mb-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-uppercase text-center col-12  pt-2">
+                                <small>Ingreso de</small>
+                                <h2>valores</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-12 pt-2">
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2 pt-3">
+                                        <small class="form-text text-muted text-center">
+                                            Costo a cobrar
+                                        </small>
+                                        <input type="number" class="form-control text-center"
+                                            placeholder="Ingresar Costo" id="costoProductoMP" name="costoProducto">
+                                    </div>
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
+                                        <small class="form-text text-muted text-center">
+                                            % de Ganancia
+                                        </small>
+                                        <input type="number" class="form-control text-center"
+                                            placeholder="Ingresar Ganancia" id="margenGananciaMP" name="margenGanancia">
+                                    </div>
+
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
+                                        <small class="form-text text-muted text-center">
+                                            Forma de Cobro
+                                        </small>
+                                        <select id="inputStateMP" class="form-control">
+                                            <option selected value="1">Link de pago</option>
+                                            <option Value="2">Codigo QR</option>
+                                            <option Value="3">Point</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
+                                        <small class="form-text text-muted text-center">
+                                            Medio de Pago
+                                        </small>
+                                        <select id="inputStateMPfp" class="form-control">
+                                            <option selected value="1">Tarjeta Debito</option>
+                                            <option Value="2">Tarjeta Credito</option>
+                                            <option Value="3">Dinero en Cuenta</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <small class="form-text text-muted text-center " id="prueba2">
+                                    IMPORTANTE! Según tu condición fiscal es posible que AFIP
+                                    <br>
+                                    y los fiscos provinciales apliquen retenciones y/o percepciones
+                                    <br>
+                                    impositivas en tus cobros.
+                                </small>
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-12 col-lg-4 offset-lg-4 pt-3">
+                                        <button type="button" class="btn btn__ficha btn-block"
+                                            id="botonCalculoMP">Calcular</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-row">
+                            
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
+                                        <H4 class="form-text text-muted text-center">
+                                            A COBRAR
+                                        </H4>
+                                        <h3 type="" class=" text-center" id="valorAPublicarMP"></h3>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!--	////////////////////////////////////////////////////////////////////////////-->
+    <section id="mercadolibre" class="mt-4" style="display: none">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-4 col-lg-4 mb-4">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="img/logoml.jpg" alt="logo MERCADOLIBRE">
+                        <div class="card-body" id="mercadoPago">
+                            <h5 class="card-title">MERCADOLIBRE</h5>
+                            <p class="card-text pb-5">Calcula de manera rápida el costo de tu Publicacion
+                            </p>
+                             <button type="button" class="btn btn__carousel" id="buttonMP2">MERCADOPAGO</button>
+                              <button type="button" class="btn btn__carousel" id="buttonMS4">MERCADOSHOP</button>
+                        </div>
+                    </div>
+                </div>
+
+                <section id="calculadoraML" class="col-12 col-md-8 col-lg-8 mb-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-uppercase text-center col-12  pt-2">
+                                <small>Ingreso de</small>
+                                <h2>valores</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-12 pt-2">
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2 pt-3">
+                                        <small class="form-text text-muted text-center">
+                                            Costo Producto
+                                        </small>
+                                        <input class="form-control text-center" placeholder="Ingresar Costo Producto"
+                                            name="costoProducto" id="costoProductoML">
+                                    </div>
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
+                                        <small class="form-text text-muted text-center">
+                                            % de Ganancia
+                                        </small>
+                                        <input type="text" class="form-control text-center"
+                                            placeholder="Ingresar Ganancia" name="margenGananciaML"
+                                            id="margenGananciaML">
+                                    </div>
+
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
+                                        <small class="form-text text-muted text-center">
+                                            Tipo de Publicacion
+                                        </small>
+                                        <select id="inputStateML" class="form-control">
+                                            <option selected value="1">Publicación CLASICA - 13% comisión</option>
+                                            <option Value="2">Publicación PREMIUM - 28% comisión</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <small class="form-text text-muted text-center " id="prueba2">
+                                    IMPORTANTE! no se calculan valores de IIBB
+                                    <br>
+                                    El mismo varía de acuerdo a la condición impositiva.
+                                </small>
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-12 col-lg-4 offset-lg-4 pt-3">
+                                        <button type="button" class="btn btn__ficha btn-block"
+                                            id="botonCalculoML">Calcular</button>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-row">
+
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2 pasandoCalculo"></div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+            
+                      
+    </section>
+
+
+    <section id="mercadoshop" class="mt-4" style="display: none">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-4 col-lg-4 mb-4">
+                    <div class="card text-center">
+                        <img class="card-img-top" src="img/logoms.jpg" alt="logo MERCADOPAGO">
+                        <div class="card-body" id="mercadoPago">
+                            <h5 class="card-title">MERCADOSHOP</h5>
+                            <p class="card-text pb-5">conoce los costos de vender producto por tu pagina
+                            </p>
+                            <button type="button" class="btn btn__carousel" id="buttonMP4">MERCADOPAGO</button>
+                              <button type="button" class="btn btn__carousel" id="buttonML4">MERCADOLIBRE</button>
+                        </div>
+                    </div>
+                </div>
+
+                <section id="calculadoraML" class="col-12 col-md-8 col-lg-8 mb-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-uppercase text-center col-12  pt-2">
+                                <small>Ingreso de</small>
+                                <h2>valores</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-12 pt-2">
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2 pt-3">
+                                        <small class="form-text text-muted text-center">
+                                            Costo Producto
+                                        </small>
+                                        <input type="number" class="form-control text-center"
+                                            placeholder="Ingresar Costo Producto" id="costoProductoMS">
+                                    </div>
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
+                                        <small class="form-text text-muted text-center">
+                                            % de Ganancia
+                                        </small>
+                                        <input type="number" class="form-control text-center"
+                                            placeholder="Ingresar Ganancia" id="margenGananciaMS">
+                                    </div>
+
+
+
+                                </div>
+                                <small class="form-text text-muted text-center " id="prueba2">
+                                    IMPORTANTE! no se calculan valores de IIBB
+                                    <br>
+                                    El mismo varía de acuerdo a la condición impositiva.
+                                </small>
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-12 col-lg-4 offset-lg-4 pt-3">
+                                        <button type="button" class="btn btn__ficha btn-block"
+                                            id="botonCalculoMS">Calcular</button>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
+                                        <small class="form-text text-muted text-center">
+                                            $ Ganancia
+                                        </small>
+                                        <h4 type="" class="form-control text-center" placeholder="" id="gananciaMS"
+                                            name="ingreso"></h4>
+                                    </div>
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
+                                        <H3 class="form-text text-muted text-center">
+                                            VALOR VENTA
+                                        </H3>
+                                        <h4 type="" class="form-control text-center" id="valorAPublicarMS"></h4>
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer id="footer" class="pb-4 pt-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-lg">
+                    <a>En Desarrollo ....</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Modal LOGUIN-->
+    <div class="modal fade" id="modalUnirse" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Ingresar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label for="inputUser" class="input-group-text">User</label>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Usuario" aria-label="Username"
+                                        aria-describedby="inputUser">
+
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label for="inputPassword" class="input-group-text">Pass</label>
+                                    </div>
+                                    <input type="password" class="form-control" placeholder="Clave"
+                                        aria-label="Password" aria-describedby="inputPassword">
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <small class="form-check-label" for="gridCheck">
+                                        Recordar datos de ingreso
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-info" role="alert" pt-4>
+                        Si aún no estas registrado o queres recuperar tus datos de ingreso hace <a href="#"
+                            class="alert-link">Click Aquí</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+                    <button type="button" class="btn btn__ficha">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal -->
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+
+    <script src="mlcalc.js"></script>
+</body>
+
+</html>
