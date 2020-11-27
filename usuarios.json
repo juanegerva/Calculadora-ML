@@ -1,0 +1,15 @@
+[
+    {
+        "usuario":"juan",
+        "clave":"prueba",
+        "nick":"juancito"},
+    {
+        "usuario":"nicolas",
+        "clave":"prueba2",
+        "nick":"nico"},
+    {
+        "usuario":"alejandra",
+        "clave":"prueba3",
+        "nick":"ale"}
+    
+    ]

@@ -11,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style/style.css">
 
     <!-- Titulo de la pagina-->
     <title>ML CALC</title>
@@ -27,7 +27,7 @@
         <nav id="logo__nav" class="navbar navbar-expand-lg navbar-dark bg-dark ">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="#" alt="Logo calculadora">
+                    ML CALC
 
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
@@ -38,8 +38,8 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link color__palabra" href="#" data-toggle="modal"
-                                data-target="#modalUnirse">Ingresar</a>
+                            <a class="nav-link color__palabra" href="#" data-toggle="modal" data-target="#modalUnirse"
+                                id="ingresoModal">Ingresar</a>
                         </li>
                     </ul>
                 </div>
@@ -54,15 +54,11 @@
             <div class="row">
                 <div class="col text-center text-uppercase">
                     <small>Simulador de costos</small>
-                    <h2>MERCADOLIBRE</h2>
+                    <h2>MEDIOS DE PAGOS MELI</h2>
                 </div>
             </div>
-
-
-
         </div>
     </section>
-
 
     <!-- OPCIONES DE CALCULO -->
     <section id="caracteristicas" class="mt-4">
@@ -77,7 +73,8 @@
                             <p class="card-text">Calcular si vas a recibir un cobro
                                 mediante link de pago, QR o Point
                             </p>
-                            <button type="button" class="btn btn__carousel" id="buttonMP">Calculo MERCADOPAGO</button>
+                            <button type="button" class="btn btn__carousel btn btn-primary" id="buttonMP">Calculo
+                                MERCADOPAGO</button>
                         </div>
                     </div>
                 </div>
@@ -91,7 +88,8 @@
                             <p class="card-text">Calcula a cuanto tenes que vender tu producto para ganar lo que
                                 esperabas
                             </p>
-                            <button type="button" class="btn btn__carousel" id="buttonML">Calculo MERCADOLIBRE</button>
+                            <button type="button" class="btn btn__carousel btn btn-warning" id="buttonML">Calculo
+                                MERCADOLIBRE</button>
                         </div>
                     </div>
                 </div>
@@ -106,7 +104,8 @@
                         <div class="card-body">
                             <h5 class="card-title">MERCADOSHOP</h5>
                             <p class="card-text">Calcula el valor y costo de vender en tu pagina</p>
-                            <button type="button" class="btn btn__carousel" id="buttonMS">Calculo MERCADOSHOPS</button>
+                            <button type="button" class="btn btn__carousel btn btn-danger" id="buttonMS">Calculo
+                                MERCADOSHOPS</button>
                         </div>
                     </div>
                 </div>
@@ -114,6 +113,7 @@
             </div>
         </div>
     </section>
+
     <!-- /OPCIONES DE CALCULOS -->
 
 
@@ -131,8 +131,10 @@
                             <p class="card-text pb-5">Calcular si vas a recibir un cobro
                                 mediante link de pago, QR o Point
                             </p>
-                            <button type="button" class="btn btn__carousel" id="buttonML2">MERCADOLIBRE</button>
-                            <button type="button" class="btn btn__carousel" id="buttonMS2">MERCADOSHOP</button>
+                            <button type="button" class="btn btn__carousel btn btn-warning"
+                                id="buttonML2">MERCADOLIBRE</button>
+                            <button type="button" class="btn btn__carousel btn btn-danger"
+                                id="buttonMS2">MERCADOSHOP</button>
                         </div>
                     </div>
                 </div>
@@ -155,15 +157,24 @@
                                         <small class="form-text text-muted text-center">
                                             Costo a cobrar
                                         </small>
-                                        <input type="number" class="form-control text-center"
-                                            placeholder="Ingresar Costo" id="costoProductoMP" name="costoProducto">
+                                        <input type="text" class="form-control text-center" placeholder="Ingresar Costo"
+                                            id="costoProductoMP" name="costoProducto" required>
+                                        <p style="color: red; display: none;" id="alertaMP" class="text-center">Ingrese
+                                            solo números para poder realizar el cálculo</p>
+                                        <p style="color: red; display: none;" id="alertaVacioMP" class="text-center">El
+                                            campo no puede estar vacio</p>
                                     </div>
                                     <div class="form-group col-12 col-lg-8 offset-lg-2">
                                         <small class="form-text text-muted text-center">
                                             % de Ganancia
                                         </small>
-                                        <input type="number" class="form-control text-center"
-                                            placeholder="Ingresar Ganancia" id="margenGananciaMP" name="margenGanancia">
+                                        <input type="text" class="form-control text-center"
+                                            placeholder="Ingresar Ganancia" id="margenGananciaMP" name="margenGanancia"
+                                            required>
+                                        <p style="color: red; display: none;" id="alertaMP2" class="text-center">Ingrese
+                                            solo números para poder realizar el cálculo</p>
+                                        <p style="color: red; display: none;" id="alertaVacioMP2" class="text-center">El
+                                            campo no puede estar vacio</p>
                                     </div>
 
                                     <div class="form-group col-12 col-lg-8 offset-lg-2">
@@ -200,14 +211,14 @@
 
                                 <div class="form-row">
                                     <div class="form-group col-12 col-lg-4 offset-lg-4 pt-3">
-                                        <button type="button" class="btn btn__ficha btn-block"
+                                        <button type="button" class="btn btn__ficha btn-block btn btn-primary"
                                             id="botonCalculoMP">Calcular</button>
                                     </div>
 
                                 </div>
 
                                 <div class="form-row">
-                            
+
                                     <div class="form-group col-12 col-lg-8 offset-lg-2">
                                         <H4 class="form-text text-muted text-center">
                                             A COBRAR
@@ -239,8 +250,10 @@
                             <h5 class="card-title">MERCADOLIBRE</h5>
                             <p class="card-text pb-5">Calcula de manera rápida el costo de tu Publicacion
                             </p>
-                             <button type="button" class="btn btn__carousel" id="buttonMP2">MERCADOPAGO</button>
-                              <button type="button" class="btn btn__carousel" id="buttonMS4">MERCADOSHOP</button>
+                            <button type="button" class="btn btn__carousel btn btn-primary"
+                                id="buttonMP2">MERCADOPAGO</button>
+                            <button type="button" class="btn btn__carousel btn btn-danger"
+                                id="buttonMS4">MERCADOSHOP</button>
                         </div>
                     </div>
                 </div>
@@ -263,16 +276,25 @@
                                         <small class="form-text text-muted text-center">
                                             Costo Producto
                                         </small>
+                                        <h5 id="error"></h5>
                                         <input class="form-control text-center" placeholder="Ingresar Costo Producto"
-                                            name="costoProducto" id="costoProductoML">
+                                            name="costoProducto" id="costoProductoML" required>
+                                        <p style="color: red; display: none;" id="alerta" class="text-center">Ingrese
+                                            solo números para poder realizar el cálculo</p>
+                                        <p style="color: red; display: none;" id="alertaVacio" class="text-center">El
+                                            campo no puede estar vacio</p>
                                     </div>
                                     <div class="form-group col-12 col-lg-8 offset-lg-2">
                                         <small class="form-text text-muted text-center">
                                             % de Ganancia
                                         </small>
                                         <input type="text" class="form-control text-center"
-                                            placeholder="Ingresar Ganancia" name="margenGananciaML"
+                                            placeholder="Ingresar Ganancia" name="margenGananciaML" required
                                             id="margenGananciaML">
+                                        <p style="color: red; display: none;" id="alerta2" class="text-center">Ingrese
+                                            solo números para poder realizar el cálculo</p>
+                                        <p style="color: red; display: none;" id="alertaVacio2" class="text-center">El
+                                            campo no puede estar vacio</p>
                                     </div>
 
                                     <div class="form-group col-12 col-lg-8 offset-lg-2">
@@ -286,28 +308,33 @@
                                     </div>
 
                                 </div>
-                                <small class="form-text text-muted text-center " id="prueba2">
-                                    IMPORTANTE! no se calculan valores de IIBB
-                                    <br>
-                                    El mismo varía de acuerdo a la condición impositiva.
-                                </small>
+
 
 
                                 <div class="form-row">
+
                                     <div class="form-group col-12 col-lg-4 offset-lg-4 pt-3">
-                                        <button type="button" class="btn btn__ficha btn-block"
+                                        <button type="submit" class="btn btn__ficha btn-block  btn btn-warning"
                                             id="botonCalculoML">Calcular</button>
                                     </div>
-
+                                    <p style="color: red; display: none;" id="alertaFormulario" class="text-center">
+                                        Ingrese solo números para poder realizar el cálculo</p>
                                 </div>
-
+                                <div class="form-row text-center">
+                                    <p style="color:rgb(21, 165, 212);" id="avisoImpuesto"
+                                        class="form-group col-12 col-lg-8 offset-lg-2 text-center"></p>
+                                </div>
 
                                 <div class="form-row">
-
-                                    <div class="form-group col-12 col-lg-8 offset-lg-2 pasandoCalculo"></div>
-
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2 text-center" id="detalleML">
+                                    </div>
                                 </div>
+                                <div id="probando"></div>
 
+                                <div class="form-row text-center">
+                                    <h3 style="color:rgb(224, 39, 64);" id="resultadoFinalML"
+                                        class="form-group col-12 col-lg-8 offset-lg-2 text-center"></h3>
+                                </div>
 
 
                             </div>
@@ -316,9 +343,17 @@
                 </section>
 
 
+                <div class="row"></div>
+                <div class="col-12 mb-4 text-center">
+                    <h4>Buscador Valor de referencia</h4>
+                    <input type="text" id="buscador">
+                    <button id="buscar">Buscar</button>
+
+                </div>
             </div>
-            
-                      
+            <div id="contenedor" style="display: inline;"></div>
+        </div>
+
     </section>
 
 
@@ -333,8 +368,10 @@
                             <h5 class="card-title">MERCADOSHOP</h5>
                             <p class="card-text pb-5">conoce los costos de vender producto por tu pagina
                             </p>
-                            <button type="button" class="btn btn__carousel" id="buttonMP4">MERCADOPAGO</button>
-                              <button type="button" class="btn btn__carousel" id="buttonML4">MERCADOLIBRE</button>
+                            <button type="button" class="btn btn__carousel btn btn-primary"
+                                id="buttonMP4">MERCADOPAGO</button>
+                            <button type="button" class="btn btn__carousel btn btn-warning"
+                                id="buttonML4">MERCADOLIBRE</button>
                         </div>
                     </div>
                 </div>
@@ -357,15 +394,23 @@
                                         <small class="form-text text-muted text-center">
                                             Costo Producto
                                         </small>
-                                        <input type="number" class="form-control text-center"
-                                            placeholder="Ingresar Costo Producto" id="costoProductoMS">
+                                        <input type="text" class="form-control text-center"
+                                            placeholder="Ingresar Costo Producto" id="costoProductoMS" required>
+                                        <p style="color: red; display: none;" id="alertaMS" class="text-center">Ingrese
+                                            solo números para poder realizar el cálculo</p>
+                                        <p style="color: red; display: none;" id="alertaVacioMS" class="text-center">El
+                                            campo no puede estar vacio</p>
                                     </div>
                                     <div class="form-group col-12 col-lg-8 offset-lg-2">
                                         <small class="form-text text-muted text-center">
                                             % de Ganancia
                                         </small>
-                                        <input type="number" class="form-control text-center"
-                                            placeholder="Ingresar Ganancia" id="margenGananciaMS">
+                                        <input type="text" class="form-control text-center"
+                                            placeholder="Ingresar Ganancia" id="margenGananciaMS" required>
+                                        <p style="color: red; display: none;" id="alertaMS2" class="text-center">Ingrese
+                                            solo números para poder realizar el cálculo</p>
+                                        <p style="color: red; display: none;" id="alertaVacioMS2" class="text-center">El
+                                            campo no puede estar vacio</p>
                                     </div>
 
 
@@ -380,29 +425,19 @@
 
                                 <div class="form-row">
                                     <div class="form-group col-12 col-lg-4 offset-lg-4 pt-3">
-                                        <button type="button" class="btn btn__ficha btn-block"
+                                        <button type="button" class="btn btn__ficha btn-block btn btn-danger"
                                             id="botonCalculoMS">Calcular</button>
                                     </div>
 
                                 </div>
-
-
                                 <div class="form-row">
-                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
-                                        <small class="form-text text-muted text-center">
-                                            $ Ganancia
-                                        </small>
-                                        <h4 type="" class="form-control text-center" placeholder="" id="gananciaMS"
-                                            name="ingreso"></h4>
-                                    </div>
-                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
-                                        <H3 class="form-text text-muted text-center">
-                                            VALOR VENTA
-                                        </H3>
-                                        <h4 type="" class="form-control text-center" id="valorAPublicarMS"></h4>
-                                    </div>
 
-
+                                    <div class="form-group col-12 col-lg-8 offset-lg-2">
+                                        <H4 class="form-text text-muted text-center">
+                                            VALOR A PUBLICAR
+                                        </H4>
+                                        <h3 type="" class=" text-center" id="valorAPublicarMS"></h3>
+                                    </div>
 
                                 </div>
 
@@ -422,11 +457,13 @@
 
 
     <!-- Footer -->
-    <footer id="footer" class="pb-4 pt-4">
+    <footer id="footer" class="pb-4 pt-4 mt-5">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12 col-lg">
-                    <a>En Desarrollo ....</a>
+                    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                        <a>SOLUCIONES SIMPLES</a>
+                    </div>
                 </div>
 
             </div>
@@ -434,56 +471,11 @@
     </footer>
     <!-- /Footer -->
 
+    <!-- Footer -->
     <!-- Modal LOGUIN-->
     <div class="modal fade" id="modalUnirse" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Ingresar</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <label for="inputUser" class="input-group-text">User</label>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Usuario" aria-label="Username"
-                                        aria-describedby="inputUser">
 
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <label for="inputPassword" class="input-group-text">Pass</label>
-                                    </div>
-                                    <input type="password" class="form-control" placeholder="Clave"
-                                        aria-label="Password" aria-describedby="inputPassword">
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                                    <small class="form-check-label" for="gridCheck">
-                                        Recordar datos de ingreso
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="alert alert-info" role="alert" pt-4>
-                        Si aún no estas registrado o queres recuperar tus datos de ingreso hace <a href="#"
-                            class="alert-link">Click Aquí</a>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-                    <button type="button" class="btn btn__ficha">Ingresar</button>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- /Modal -->
 
@@ -499,7 +491,13 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
 
-    <script src="mlcalc.js"></script>
+    <script src="scrips/login.js"></script>
+    <script src="scrips/apimercado.js"></script>
+    <script src="scrips/calculoML.js"></script>
+    <script src="scrips/calculoMP.js"></script>
+    <script src="scrips/calculoMS.js"></script>
+    <script src="scrips/index.js"></script>
+    <script src="scrips/validacion.js"></script>
 </body>
 
 </html>
